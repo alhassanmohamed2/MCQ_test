@@ -8,7 +8,7 @@ import numpy as np
 import sys
 np.set_printoptions(threshold=sys.maxsize)
 
-students_num = 10
+students_num = 10000
 number_of_questions = 10
 test_answer_list =  ['d', 'a', 'c', 'c', 'd', 'd', 'b', 'd', 'b', 'b']
 choise_list = ['a', 'b', 'c', 'd']
