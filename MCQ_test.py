@@ -8,7 +8,7 @@ import numpy as np
 import sys
 np.set_printoptions(threshold=sys.maxsize)
 
-students_num = 100000
+students_num = 10
 number_of_questions = 10
 test_answer_list =  ['d', 'a', 'c', 'c', 'd', 'd', 'b', 'd', 'b', 'b']
 choise_list = ['a', 'b', 'c', 'd']
@@ -41,11 +41,13 @@ succuess_students = np.count_nonzero(students_precentge_list>=60)
 temp = np.partition(-students_precentge_list, succuess_students)
 high_marks_list = -temp[:succuess_students]
 
-
-print(f'Passed marks \n{high_marks_list}\n')
+if succuess_students == 0:
+	print(f'All marks \n{students_precentge_list}\n')
+else:
+	print(f'Passed marks \n{high_marks_list}\n')
 print(f'The number of all Students {students_num}\n')
 print(f'The number of Passed Students {succuess_students}\n')
 print(f'The precentge of Passed Students {succuess_students/students_num}%\n')
-print(f'The highest Student mark {np.max(high_marks_list)}%\n')
+print(f'The highest Student mark { 0 if len(high_marks_list) == 0 else np.max(high_marks_list)}%\n')
 print(f'The number of Students take full mark {np.count_nonzero(students_precentge_list == 100)}\n')
 print(f'The mean value of students marks {np.mean(students_precentge_list)}%')
