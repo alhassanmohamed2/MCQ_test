@@ -44,7 +44,7 @@ high_marks_list = -temp[:succuess_students]
 if succuess_students == 0:
 	print(f'All marks \n{students_precentge_list}\n')
 else:
-	print(f'Passed marks \n{high_marks_list}\n')
+	print(f'Passed marks \n{high_marks_list}\n')	
 print(f'The number of all Students {students_num}\n')
 print(f'The number of Passed Students {succuess_students}\n')
 print(f'The precentge of Passed Students {succuess_students/students_num}%\n')
